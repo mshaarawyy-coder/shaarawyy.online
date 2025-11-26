@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>السيرة الذاتية - مصطفى أحمد عبد الرحمن عبد الجواد</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Cairo", system-ui, sans-serif;
+      background: radial-gradient(circle at top, #0f0f0f, #1b1b1b);
+      color: #ddd;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* الروابط الجانبية */
+    .side-links {
+      position: fixed;
+      left: 25px;
+      top: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      z-index: 9999;
+    }
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 170px;
+      height: 55px;
+      padding: 0 12px;
+      background: #111;
+      border-radius: 14px;
+      box-shadow: 0 0 10px #d4a72c55;
+      border: 1px solid #d4a72c33;
+      transition: 0.2s ease;
+      text-decoration: none;
+    }
+    .social-item:hover {
+      background: #d4a72c;
+    }
+    .social-item .icon {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+    .social-item span {
+      color: #f6d26b;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .social-item:hover span {
+      color: #000;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #1e1e1e;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      overflow: hidden;
+      border: 1px solid rgba(255,215,0,0.15);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #000, #2a2a2a);
+      color: #f6d26b;
+      padding: 24px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-photo img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 2px solid #f6d26b;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .header-main h1 {
+      margin: 0;
+      font-size: 26px;
+      color: #fff;
+    }
+    .header-main .title {
+      margin-top: 6px;
+      font-size: 15px;
+      color: #f6d26b;
+    }
+    .header-contact {
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .header-contact a {
+      color: #f6d26b;
+      text-decoration: none;
+    }
+
+    .header-icon img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid #f6d26b;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr);
+      padding: 26px 30px 30px;
+      gap: 20px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #f6d26b;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section {
+      margin-bottom: 18px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.05);
+      background: linear-gradient(to bottom right, #262626, #1a1a1a);
+    }
+    .section p, .section ul {
+      margin: 4px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: #ddd;
+    }
+
+    ul { list-style-type: square; }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .tag {
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,215,0,0.3);
+      background: rgba(60, 60, 60, 0.7);
+      color: #f6d26b;
+      white-space: nowrap;
+    }
+
+    .cert-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 10px;
+      justify-content: flex-start;
+    }
+
+    .cert-item img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 6px;
+      border-radius: 16px;
+    }
+
+    .cert-item p {
+      color: #f6d26b;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .cert-item {
+      text-align: center;
+      width: 110px;
+      cursor: pointer;
+      transition: transform 0.12s ease;
+    }
+    .cert-item:hover { transform: translateY(-3px); }
+
+    .footer-note {
+      text-align: center;
+      font-size: 11px;
+      padding: 8px 14px 14px;
+      color: #888;
+    }
+
+    /* تحسين المظهر على الموبايل */
+    @media (max-width: 768px) {
+      .side-links {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .social-item {
+        width: auto;
+        min-width: 140px;
+        height: 45px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- الروابط الجانبية بسوشيال + إيميلات -->
+  <div class="side-links">
+
+    <a href="https://www.linkedin.com/in/mostafa-abdelgawad-a4b018240" target="_blank" class="social-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="icon" alt="LinkedIn">
+      <span>LinkedIn</span>
+    </a>
+
+    <a href="https://people.bayt.com/mostafa-shaarawy-76741841" target="_blank" class="social-item">
+      <img src="bayt.png" class="icon" alt="Bayt">
+      <span>Bayt</span>
+    </a>
+
+    <a href="https://www.facebook.com/mostfa.ahmed.10/" target="_blank" class="social-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="icon" alt="Facebook">
+      <span>Facebook</span>
+    </a>
+
+    <a href="https://github.com/mshaarawyy-coder" target="_blank" class="social-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="icon" alt="GitHub">
+      <span>GitHub</span>
+    </a>
+
+    <a href="mailto:M.shaarawyy@outlook.sa" target="_blank" class="social-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732223.png" class="icon" alt="Outlook">
+      <span>Outlook</span>
+    </a>
+
+    <a href="mailto:m.shaarawyy@gmail.com" target="_blank" class="social-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" class="icon" alt="Gmail">
+      <span>Gmail</span>
+    </a>
+
+  </div>
+
+  <div class="page">
+    <div class="header">
+      <div class="header-photo">
+        <img src="photo.jpg" alt="الصورة الشخصية">
+      </div>
+      <div class="header-main">
+        <h1>مصطفى أحمد عبد الرحمن عبد الجواد</h1>
+        <div class="title">مهندس نظم وشبكات • Windows Server & Azure Administrator</div>
+      </div>
+      <div class="header-contact">
+        جدة، السعودية<br>
+        <a href="mailto:m.shaarawyy@gmail.com">m.shaarawyy@gmail.com</a><br>
+        0536675330
+      </div>
+      <div class="header-icon">
+        <img src="favicon.png" alt="CV Icon">
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- الملخص المهني من الكود -->
+      <div class="section">
+        <h2>💼 الملخص المهني</h2>
+        <p>
+          خبرة في إدارة أنظمة وخوادم Windows Server (2016-2019-2022-2025)، وتكوين Active Directory Domain Services (AD DS).
+          إدارة وإعداد DNS، DHCP، WDS، WSUS، Windows Backup وVeeam، IIS وFTP، VPN، File Server، iSCSI، وتهيئة الأقراص.
+          بناء وتشغيل بيئات افتراضية باستخدام VMware وHyper-V.
+          العمل على خدمات Azure (AZ-104) وEntra ID.
+        </p>
+      </div>
+
+      <!-- المهارات -->
+      <div class="section">
+        <h2>🛠️ المهارات التقنية</h2>
+        <div class="skill-tags">
+          <span class="tag">Windows Server (2016-2019-2022-2025)</span>
+          <span class="tag">Active Directory (AD DS)</span>
+          <span class="tag">DNS / DHCP / WSUS / WDS</span>
+          <span class="tag">Windows Backup / Veeam</span>
+          <span class="tag">IIS / FTP</span>
+          <span class="tag">File Server / iSCSI / VPN</span>
+          <span class="tag">VMware / Hyper-V</span>
+          <span class="tag">Azure (AZ-104) / Entra ID</span>
+        </div>
+      </div>
+
+      <!-- الخبرة -->
+      <div class="section">
+        <h2>🏢 الخبرة العملية</h2>
+        <p><strong>IT Specialist – شركة الطلائع للاستشارات الهندسية، جدة</strong></p>
+        <ul>
+          <li>تكوين وإدارة خوادم Windows Server وActive Directory وDNS وDHCP وGroup Policy.</li>
+          <li>تنفيذ النسخ الاحتياطي والاستعادة باستخدام Windows Backup وVeeam.</li>
+          <li>إعداد وإدارة IIS وFTP واستكشاف المشكلات الفنية وحلها.</li>
+          <li>بناء بيئات افتراضية باستخدام VMware وHyper-V.</li>
+          <li>خبرة في إعداد أجهزة GPS ومعالجة البيانات الخاصة بالمسح الأرضي.</li>
+        </ul>
+      </div>
+
+      <!-- التعليم -->
+      <div class="section">
+        <h2>🎓 التعليم</h2>
+        <p>
+          بكالوريوس تكنولوجيا المعلومات – تخصص علوم الحاسب الآلي، جامعة مصر للعلوم والتكنولوجيا (2020)<br>
+          شهادة CCNA – المعهد القومي للاتصالات (NTI)<br>
+          شهادة MCSA – Microsoft Certified Solutions Associate
+        </p>
+      </div>
+
+      <!-- الشهادات -->
+      <div class="section">
+        <h2>📂 الشهادات والملفات</h2>
+        <div class="cert-grid">
+          <a class="cert-item" href="university.pdf" target="_blank">
+            <img src="university.png" alt="شهادة الجامعة">
+            <p>شهادة الجامعة</p>
+          </a>
+          <a class="cert-item" href="ccna.pdf" target="_blank">
+            <img src="ccna.png" alt="CCNA">
+            <p>CCNA</p>
+          </a>
+          <a class="cert-item" href="experience1.pdf" target="_blank">
+            <img src="experience1.png" alt="شهادة خبرة 1">
+            <p>شهادة خبرة 1</p>
+          </a>
+          <a class="cert-item" href="experience2.pdf" target="_blank">
+            <img src="experience2.png" alt="شهادة خبرة 2">
+            <p>شهادة خبرة 2</p>
+          </a>
+          <a class="cert-item" href="cv.pdf" target="_blank">
+            <img src="cv.png" alt="السيرة الذاتية">
+            <p>السيرة الذاتية PDF</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- اللغات -->
+      <div class="section">
+        <h2>🌐 اللغات</h2>
+        <p>العربية (اللغة الأم) – الإنجليزية (جيد جدًا)</p>
+      </div>
+
+    </div>
+
+    <div class="footer-note">
+      نسخة ويب من السيرة الذاتية – للاستخدام في التقديم على الوظائف والاطلاع السريع.
+    </div>
+  </div>
+
+</body>
+</html>
