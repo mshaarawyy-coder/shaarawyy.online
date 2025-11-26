@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>السيرة الذاتية - مصطفى أحمد عبد الرحمن عبد الجواد</title>
+  <style>
+.header-photo img{
+  width:100px;
+  height:100px;
+  object-fit:cover;
+  border-radius:14px;
+  border:2px solid #f6d26b;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Cairo", system-ui, sans-serif;
+      background: radial-gradient(circle at top, #f5f1e6, #e5e5e5);
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      overflow: hidden;
+      border: 1px solid rgba(176,139,46,0.18);
+    }
+
+    /* الهيدر */
+    .header {
+      background: linear-gradient(135deg, #1b1b1b, #3b3420);
+      color: #fff;
+      padding: 24px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-main h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+    .header-main .title {
+      margin-top: 6px;
+      font-size: 15px;
+      color: #f0e1b5;
+    }
+    .header-contact {
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .header-contact a {
+      color: #f6d26b;
+      text-decoration: none;
+    }
+
+    /* المحتوى */
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr);
+      padding: 26px 30px 30px;
+      gap: 20px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #3c2d10;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2 span.icon {
+      font-size: 18px;
+    }
+
+    .section {
+      margin-bottom: 18px;
+      padding: 14px 16px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.04);
+      background: linear-gradient(to bottom right, #ffffff, #faf6ee);
+    }
+    .section p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+    .section ul {
+      margin: 4px 18px 0 0;
+      padding: 0;
+      list-style-type: square;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* التاقات بتاعة المهارات */
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .tag {
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(176,139,46,0.4);
+      background: rgba(250,242,214,0.7);
+      color: #4a3813;
+      white-space: nowrap;
+    }
+
+    /* الشهادات والملفات */
+    .cert-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 10px;
+      justify-content: flex-start;
+    }
+    .cert-item {
+      text-align: center;
+      font-size: 13px;
+      width: 110px;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+    .cert-item img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 6px;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 6px;
+    }
+    .cert-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .cert-item p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    /* رِجل الصفحة */
+    .footer-note {
+      text-align: center;
+      font-size: 11px;
+      padding: 8px 14px 14px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-contact {
+        text-align: right;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- الهيدر -->
+    <div class="header">
+
+      <div class="header-photo">
+        <img src="photo.jpg" alt="الصورة الشخصية">
+      </div>
+
+      <div class="header-main">
+        <h1>مصطفى أحمد عبد الرحمن عبد الجواد</h1>
+        <div class="title">مهندس نظم وشبكات • Windows Server & Azure Administrator</div>
+      </div>
+
+      <div class="header-contact">
+        جدة، السعودية<br>
+        <a href="mailto:m.shaarawyy@gmail.com">m.shaarawyy@gmail.com</a><br>
+        0536675330
+      </div>
+
+    </div>
+
+
+    <!-- المحتوى -->
+    <div class="content">
+      <div>
+
+        <div class="section">
+          <h2><span class="icon">💼</span>الملخص المهني</h2>
+          <p>
+            مهندس نظم وشبكات بخبرة في إدارة خوادم Windows Server وActive Directory وبيئات Azure،
+            مع تركيز على تحسين البنية التحتية، واستمرارية الخدمة، وحماية البيانات في بيئات الإنتاج والبيئات التجريبية (Lab).
+          </p>
+        </div>
+
+        <div class="section">
+          <h2><span class="icon">🛠️</span>المهارات التقنية</h2>
+          <div class="skill-tags">
+            <span class="tag">Windows Server 2022</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">Group Policy</span>
+            <span class="tag">DNS / DHCP</span>
+            <span class="tag">WSUS / WDS</span>
+            <span class="tag">VMware</span>
+            <span class="tag">Hyper-V</span>
+            <span class="tag">Azure (AZ-104)</span>
+            <span class="tag">Odoo ERP</span>
+            <span class="tag">CCNA Networking</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2><span class="icon">🏢</span>الخبرة العملية</h2>
+          <p><strong>IT Specialist – شركة الطلائع للاستشارات الهندسية، جدة</strong> (2022 - حتى الآن)</p>
+          <ul>
+            <li>إدارة خوادم Windows Server وActive Directory للمكاتب والفروع ومراقبة حالة الخدمات بشكل مستمر.</li>
+            <li>دعم المستخدمين وحل أعطال الشبكة والأجهزة مع تحسين الأداء وتقليل وقت التوقف.</li>
+            <li>بناء وتشغيل بيئة افتراضية باستخدام VMware وHyper-V لأغراض الاختبار والتشغيل.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2><span class="icon">🎓</span>التعليم</h2>
+          <p>بكالوريوس علوم الحاسب – جامعة مصر للعلوم والتكنولوجيا (2020)</p>
+        </div>
+
+        <div class="section">
+          <h2><span class="icon">📂</span>الشهادات والملفات</h2>
+          <div class="cert-grid">
+            <a class="cert-item" href="university.pdf" target="_blank">
+              <img src="university.png" alt="شهادة الجامعة">
+              <p>شهادة الجامعة</p>
+            </a>
+            <a class="cert-item" href="ccna.pdf" target="_blank">
+              <img src="ccna.png" alt="CCNA">
+              <p>CCNA</p>
+            </a>
+            <a class="cert-item" href="experience1.pdf" target="_blank">
+              <img src="experience1.png" alt="شهادة خبرة 1">
+              <p>شهادة خبرة 1</p>
+            </a>
+            <a class="cert-item" href="experience2.pdf" target="_blank">
+              <img src="experience2.png" alt="شهادة خبرة 2">
+              <p>شهادة خبرة 2</p>
+            </a>
+            <a class="cert-item" href="cv.pdf" target="_blank">
+              <img src="cv.png" alt="السيرة الذاتية">
+              <p>السيرة الذاتية PDF</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2><span class="icon">🌐</span>اللغات</h2>
+          <p>العربية (اللغة الأم) – الإنجليزية (جيد جدًا)</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-note">
+      نسخة ويب من السيرة الذاتية – للاستخدام في التقديم على الوظائف والاطلاع السريع.
+    </div>
+  </div>
+</body>
+</html>
